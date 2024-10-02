@@ -1,0 +1,28 @@
+
+  .logoLink {
+    text-decoration: none;
+  }
+  
+  .logoText {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff6b6b, #f0e130, #1dd1a1, #5f27cd);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 7s infinite;
+    font-family: 'Cursive', sans-serif; 
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
