@@ -33,7 +33,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/ui/dropdown-menujsx",
-    "app/ui/titleSections.jsx",
+    "app/ui/TitleSections.jsx",
     "app/components/Navbar.jsx"
   ],
   "exclude": [

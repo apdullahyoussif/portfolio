@@ -7,9 +7,9 @@ const Modal = ({ selectedCert, onClose }) => {
 	return (
 		<div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>
 			<div className='bg-white p-4 rounded-lg relative'>
-				<button
+				<button  aria-label="Icon Sertificate Button" 
 					onClick={onClose}
-					className='absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded'>
+					className='absolute h-12 top-2 right-2 bg-red-500 text-white px-2 py-1 rounded'>
 					<IoMdClose />
 				</button>
 
@@ -17,8 +17,9 @@ const Modal = ({ selectedCert, onClose }) => {
 					<Image
 						src={selectedCert.image}
 						alt={selectedCert.name}
-						width={600}
+						width={350}
 						height={400}
+						priority
 						className={`w-full h-full object-contain `}
 					/>
 					<h3 className='text-lg font-bold mt-4'>{selectedCert.name}</h3>

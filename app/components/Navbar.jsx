@@ -1,44 +1,58 @@
 /** @format */
-
 'use client';
 import Link from 'next/link';
-import { Links } from '../lib/Data';
+import { Links } from '../lib/AllData';
 import NavbarUI from '../ui/navbar';
-import { useTheme } from 'next-themes';
-import { FaBars, FaMoon, FaSun } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import styles from '../ui/styles/Logo.module.css';
 import Button from '../ui/button';
-import { useEffect, useState } from 'react';
-import {  useAuth, UserButton } from '@clerk/nextjs';
-import LinlsMnue from '../ui/linlsMnue';
+import { useState } from 'react';
+import { useAuth, UserButton } from '@clerk/nextjs';
+import LinksMnue from '../ui/LinksMnue';
+import { motion } from 'framer-motion';
+// import IconsThemes from '../ui/IconsThemes';
+import dynamic from 'next/dynamic';
+
+const IconsThemes = dynamic(() => import('../ui/IconsThemes'), {
+  ssr: false,
+});
 export default function Navbar() {
-	const { theme, setTheme } = useTheme();
-	const [open, setOpen] = useState(); 
-	const [mounted, setMounted] = useState(false);
-    const { isSignedIn } = useAuth(); 
-
-	useEffect(() => setOpen(false), []);
-	useEffect(() => setMounted(true), []);
-
-	if (!mounted) return null;
+	const [open, setOpen] = useState(false);
+	const { isSignedIn } = useAuth();
+	const menuVariants = {
+		open: {
+			opacity: 1,
+			height: 'auto',
+			visibility: 'visible',
+			transition: { type: 'spring', stiffness: 50 },
+		},
+		closed: {
+			opacity: 0,
+			height: 0,
+			visibility: 'hidden',
+			transition: { type: 'spring', stiffness: 50 },
+		},
+	};
 
 	return (
 		<nav className='bg-white shadow-lg dark:bg-gray-800 dark:text-gray-200 relative'>
 			<div className='container mx-auto flex items-center justify-between py-4'>
 				<div className={styles.logoContainer}>
-					<Link
+					<Link aria-label="LOGO Link" 
+						prefetch
 						href='/'
 						className={styles.logoLink}>
-						<p className={styles.logoText}> &lt; Abdullah / &gt;</p>
+						<p className={styles.logoText}>&lt; Abdullah /&gt;</p>
 					</Link>
 				</div>
+
 				<div className='flex items-center gap-2 justify-center'>
-					<button
-						onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-						className={`flex items-center justify-center h-7 w-7 rounded-full bg-gray-400 hover:bg-slate-500 ${styles.themeButton}`}>
-						{theme === 'dark' ? <FaMoon /> : <FaSun />}
-					</button>
-					<Button title={'My Blog'} />
+					<IconsThemes />
+					<Link aria-label="Blog Link" 
+						prefetch
+						href={'/blog'}>
+						<Button title={'My Blog'} />
+					</Link>
 				</div>
 
 				<div className='hidden lg:flex space-x-2'>
@@ -52,27 +66,42 @@ export default function Navbar() {
 				</div>
 
 				{isSignedIn ? (
-					<UserButton 
-					
-				/>				) : (
+					<UserButton />
+				) : (
 					<div className='md:flex hidden items-center gap-2'>
-						<Link href='/sign-in'>
+						<Link aria-label="sign-in Link" 
+							prefetch
+							href='/sign-in'>
 							<Button title={'Login'} />
 						</Link>
-						<Link href='/sign-up'>
+						<Link aria-label="sign-up Link" 
+							prefetch
+							href='/sign-up'>
 							<Button title={'Sign up'} />
 						</Link>
 					</div>
 				)}
+
 				<div className='lg:hidden transition'>
 					<div
 						onClick={() => setOpen(!open)}
 						className='cursor-pointer'>
-						<FaBars className='h-6 w-6 text-gray-800 dark:text-gray-200' />
+						{open ? (
+							<FaTimes className='h-6 w-6 font-normal text-gray-800 dark:text-gray-200' />
+						) : (
+							<FaBars className='h-6 w-6 text-gray-800 dark:text-gray-200' />
+						)}
 					</div>
-					<div className='absolute top-[75px] left-10 z-10 p-2'>
-						{open && <LinlsMnue />}
-					</div>
+
+					<motion.div
+						className={`min-w-[350px] absolute top-[80px] left-1/2 -translate-x-1/2 z-10 p-2 ${
+							open ? 'block' : 'hidden'
+						}`}
+						initial={false}
+						animate={open ? 'open' : 'closed'}
+						variants={menuVariants}>
+						<LinksMnue />
+					</motion.div>
 				</div>
 			</div>
 		</nav>

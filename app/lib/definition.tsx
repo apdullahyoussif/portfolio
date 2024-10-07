@@ -1,5 +1,4 @@
 import { StaticImageData } from "next/image";
-
 export type FoundProject = {
     id: number;
     title: string;
@@ -7,3 +6,13 @@ export type FoundProject = {
 	image: string | StaticImageData; 
     technologies: string[];
 } 
+
+export type Post = {
+    id: string;
+    author: string;
+    authorimage: string;
+    date: string;
+    title: string;
+    description: string;
+    content: string;
+  };

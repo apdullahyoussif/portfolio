@@ -12,7 +12,7 @@ const config: Config = {
 		extend: {
 			backgroundImage: {
 				'gradient-light': 'linear-gradient(to bottom, #1e40af  , #1f2937 )',
-				'gradient-dark': 'linear-gradient(to bottom, #eff6ff, #93c5fd,#eff6ff  )',
+				'gradient-dark': 'linear-gradient(to bottom, #eff6ff, #93c5fd, #eff6ff  )',
 				'secondary-gradient-light': 'linear-gradient(to bottom, #1f2937,#111827  )',
 			},
 			fontFamily: {

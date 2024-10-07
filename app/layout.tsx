@@ -1,3 +1,5 @@
+/** @format */
+
 import './ui/styles/globals.css';
 import type { Metadata } from 'next';
 import { ThemeProvider } from './ui/theme-provider';
@@ -17,18 +19,25 @@ export const metadata: Metadata = {
 	description: 'Portfolio app',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode; }) {
+export default function RootLayout({
+	children,
+}: {
+	children: React.ReactNode;
+}) {
 	return (
-		<ClerkProvider>
-			<html lang='en'  suppressHydrationWarning={true}>
-				<body className={`${cairo.className} antialiased bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100`}>
-					<ThemeProvider attribute='class'>
+		<html
+			lang='en'
+			suppressHydrationWarning={true}>
+			<body
+				className={`${cairo.className} antialiased bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100`}>
+				<ThemeProvider attribute='class'>
+					<ClerkProvider>
 						<Navbar />
 						{children}
 						<Footer />
-					</ThemeProvider>
-				</body>
-			</html>
-		</ClerkProvider>
+					</ClerkProvider>
+				</ThemeProvider>
+			</body>
+		</html>
 	);
 }

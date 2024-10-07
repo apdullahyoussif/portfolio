@@ -16,21 +16,20 @@ import {
 	SiPostgresql,
 	SiExpress,
 } from 'react-icons/si';
-import image from '../assets/advJS.png';
-import image1 from '../assets/advReact.png';
-import image2 from '../assets/asyncJS.png';
-import image3 from '../assets/basicsJS.png';
-import image4 from '../assets/basiscgit.png';
-import image5 from '../assets/html_scc.png';
-import image6 from '../assets/intero_web_internet.png';
-import image7 from '../assets/nextjs.png';
-import image8 from '../assets/JSlinckedin.png';
 import { FaRobot, FaCode, FaProjectDiagram, FaCogs } from 'react-icons/fa';
+import image from '../assets/webp/advJS.webp';
+import image1 from '../assets/webp/advReact.webp';
+import image2 from '../assets/webp/asyncJS.webp';
+import image3 from '../assets/webp/basicsJS.webp';
+import image4 from '../assets/webp/basiscgit.webp';
+import image5 from '../assets/webp/html_scc.webp';
+import image6 from '../assets/webp/intero_web_internet.webp';
+import image7 from '../assets/webp/nextjs.webp';
+import image8 from '../assets/webp/JSlinckedin.webp';
 
-import imageChat from '../assets/CHATGPT.png';
-import imageBank from '../assets/Bank.png';
-import imageEcommerce from '../assets/Ecommerc.png';
-import imageEdit from '../assets/projectEditor.png';
+import imageChat from '../assets/webp/CHATGPT.webp';
+import imageBank from '../assets/webp/Bank.webp';
+import imageEcommerce from '../assets/webp/Ecommerc.webp';
 
 export const Links = [
 	{
@@ -41,26 +40,35 @@ export const Links = [
 	{
 		id: 2,
 		name: 'About',
-		path: '#about',
+		path: '/#about',
 	},
 	{
 		id: 3,
 		name: 'Services',
-		path: '#services',
+		path: '/#services',
 	},
 	{
 		id: 4,
-		name: 'Projects',
-		path: '/projects',
+		name: 'Certificates',
+		path: '/#certificates',
 	},
 	{
 		id: 5,
 		name: 'Contact',
-		path: '#contact',
+		path: '/#contact',
+	},
+	{
+		id: 6,
+		name: 'Projects',
+		path: '/projects',
 	},
 ];
 export const skills = [
-	{ id: 1, name: 'HTML5', icon: <FaHtml5 className='text-orange-500' /> },
+	{
+		id: 1,
+		name: 'HTML5',
+		icon: <FaHtml5 className='text-orange-500' />,
+	},
 	{ id: 2, name: 'CSS3', icon: <FaCss3Alt className='text-blue-500' /> },
 	{ id: 3, name: 'JavaScript', icon: <FaJs className='text-yellow-500' /> },
 	{
@@ -90,23 +98,24 @@ export const skills = [
 export const testimonials = [
 	{
 		id: 1,
-		name: 'John Doe',
+		name: 'Alex Johnson',
 		comment:
-			'Abdullah is a fantastic developer! His work is top-notch, and he always delivers on time.',
+			'Abdullah is an exceptional developer! His work is of the highest quality, and he always meets deadlines.',
 	},
 	{
 		id: 2,
-		name: 'Jane Smith',
+		name: 'Emily Davis',
 		comment:
-			'I have worked with Abdullah on multiple projects, and he never disappoints. Highly recommended!',
+			'I have collaborated with Abdullah on several projects, and he consistently exceeds expectations. Highly recommended!',
 	},
 	{
 		id: 3,
-		name: 'Sam Wilson',
+		name: 'Michael Brown',
 		comment:
-			'Professional, talented, and easy to work with. Abdullah is simply the best!',
+			'Professional, talented, and a pleasure to work with. Abdullah is simply the best in the business!',
 	},
 ];
+
 export const services = [
 	{
 		id: 1,
@@ -177,6 +186,15 @@ export const projects = [
 			'An online store built with Next.js and Tailwind CSS. Integrated with Stripe for payment processing.',
 		image: imageEcommerce,
 		technologies: ['Next.js', 'Tailwind CSS', 'Stripe', 'Clerk'],
+		path: 'https://youly-books-store.vercel.app/?fbclid=IwY2xjawFuZ8FleHRuA2FlbQIxMAABHbaBeVQyl_M4IlA3vLJ5uLz-i78b79EsZtGqbxB4WrAdykDp_-IheUv0mA_aem_ThX51oiI9iUHVuI9NKRYeg',
+	},
+	{
+		id: 3,
+		title: 'Modern Banking App',
+		description: ' A modern banking app built with React.js and Tailwind CSS',
+		image: imageBank,
+		technologies: ['React.js', 'Tailwind CSS'],
+		path: 'https://bank-modern-app-flame.vercel.app/',
 	},
 	{
 		id: 2,
@@ -191,19 +209,6 @@ export const projects = [
 			'Tailwind CSS',
 			'SQL',
 		],
-	},
-	{
-		id: 3,
-		title: 'Modern Banking App',
-		description: ' A modern banking app built with React.js and Tailwind CSS',
-		image: imageBank,
-		technologies: ['React.js', 'Tailwind CSS'],
-	},
-	{
-		id: 4,
-		title: 'Editor App',
-		description: 'A text editor app built with JavaScript and CSS',
-		image: imageEdit,
-		technologies: ['JavaScript', ' CSS', 'HTML'],
+		path: 'https://open-ai-nine-kohl.vercel.app/',
 	},
 ];

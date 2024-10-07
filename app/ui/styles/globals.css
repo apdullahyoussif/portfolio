@@ -12,27 +12,15 @@ html {
   scroll-behavior: smooth;
 
 }
-:root {
-  --background: #f0f0f0;
-  --foreground: #1f2937;
+
+.wrap {
+  overflow-wrap: break-word; /* اجبر الكلمة على الالتفاف إذا كانت طويلة */
+  word-wrap: break-word; /* نسخ من overflow-wrap لدعم المتصفحات القديمة */
 }
 
-[data-theme='dark'] {
-  --background: #1f2937;
-  --foreground: #f0f0f0;
-}
-
-.loader {
-	animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
-}
 .cl-avatarBox {
-  width:50px;
-  height:50px;
+  width:40px;
+  height:40px;
   border-radius: 100%;
   display: flex;
   align-items: center;

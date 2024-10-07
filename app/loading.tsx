@@ -10,13 +10,13 @@ const Loading = () => {
 					<motion.div
 						key={index}
 						className='w-12 h-12 bg-blue-500 rounded-full'
-						initial={{ opacity: 1.5 }}
-						animate={{ opacity: 1 }}
+						initial={{ scale: 0.5, opacity: 0.5 }}
+						animate={{ scale: 1, opacity: 1 }}
 						transition={{
 							duration: 0.6,
 							ease: 'easeInOut',
 							repeat: Infinity,
-							repeatDelay: 0.2 * index,
+							delay: index * 0.2, 
 						}}
 					/>
 				))}

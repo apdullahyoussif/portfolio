@@ -1,7 +1,7 @@
 /** @format */
 'use client';
 import { useState } from 'react';
-import Title from '../ui/titleSections';
+import Title from '../ui/TitleSections';
 
 export default function Contact() {
 	const [formData, setFormData] = useState({
@@ -10,19 +10,21 @@ export default function Contact() {
 		message: '',
 	});
 
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+	const handleChange = (
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
 		const { name, value } = e.target;
 		setFormData({ ...formData, [name]: value });
 	};
 
-	const handleSubmit = (e: { preventDefault: () => void; }) => {
+	const handleSubmit = (e: { preventDefault: () => void }) => {
 		e.preventDefault();
 	};
 
 	return (
 		<section
-		id='contact'
-		className='py-16 bg-gray-100 dark:bg-gray-900'>
+			id='contact'
+			className='py-16 bg-gray-100 dark:bg-gray-900'>
 			<div className='container mx-auto text-center'>
 				<Title text={'Contact Me'} />
 				<p className='text-lg text-gray-700 dark:text-gray-300 mb-8'>
@@ -63,9 +65,9 @@ export default function Contact() {
 							rows={5}
 							required></textarea>
 					</div>
-					<button
+					<button  aria-label="Send Button" 
 						type='submit'
-						className='w-full bg-blue-500 text-white py-4 rounded-lg hover:bg-blue-600 transition duration-300'>
+						className='w-full h-12  bg-blue-500 text-white py-4 rounded-lg hover:bg-blue-600 transition duration-300'>
 						Send Message
 					</button>
 				</form>

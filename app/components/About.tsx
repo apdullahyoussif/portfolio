@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import Button from '../ui/button';
-import aboutImg from '../assets/about.png';
-import Title from '../ui/titleSections';
+import aboutImg from '../assets/webp/about.webp';
+import Title from '../ui/TitleSections';
 import ButtonDownload from '../ui/downloadButton';
 export default function About() {
 	const [isVisible, setIsVisible] = useState(false);
@@ -34,7 +34,7 @@ export default function About() {
 
 	return (
 		<section
-		id='about'
+			id='about'
 			ref={sectionRef}
 			className='dark:bg-secondary-gradient-light  bg-gradient-dark  pb-16'>
 			<motion.div
@@ -59,17 +59,17 @@ export default function About() {
 						height={350}
 						className='w-full h-full object-contain'
 						priority
+						
 					/>
 				</motion.div>
 
-				<motion.div
-					className='flex-1 text-center md:text-left'
-					initial={{ opacity: 0, x: -100 }}
-					animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
-					transition={{ duration: 0.8, delay: 0.3 }}>
+				<div
+					className='flex-1 text-center md:text-left'>
+					
 					<p className='text-lg text-gray-700 dark:text-gray-300'>
-						Hi, I’m Abdullah, a passionate Full Stack Developer with expertise
-						in Front-End technologies like React, Next.js, and Tailwind CSS.
+						Hi, I&apos;m Abdullah, a passionate Full Stack Developer with
+						expertise in Front-End technologies like React, Next.js, and
+						Tailwind CSS.
 					</p>
 					<p className='text-lg text-gray-700 dark:text-gray-300 mt-4'>
 						With my experience in Back-End technologies like Node.js, Express,
@@ -78,11 +78,11 @@ export default function About() {
 					</p>
 					<div className='mt-6 flex justify-center md:justify-start space-x-4'>
 						<ButtonDownload />
-						<a href='https://wa.me/01069155929'>
+						<a aria-label="Contact link"  href='https://wa.me/01069155929'>
 							<Button title='Contact Me' />
 						</a>
 					</div>
-				</motion.div>
+				</div>
 			</div>
 		</section>
 	);
