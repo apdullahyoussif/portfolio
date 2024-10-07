@@ -1,7 +1,7 @@
 /** @format */
 import React from 'react';
 
-const Title = ({text}) => {
+const TitleSections = ({text}) => {
 const  title = text
 	return <div className='relative min-w-[300px] text-center mx-auto py-10 '>
     <p className='text-[50px] md:text-[70px] font-bold tracking-widest opacity-10 text-indigo-600 ' >{title}</p>
@@ -9,4 +9,4 @@ const  title = text
   </div>;
 };
 
-export default Title;
+export default TitleSections;

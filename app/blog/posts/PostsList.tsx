@@ -7,7 +7,7 @@ import { getPosts } from '../../lib/data.ts';
 import { Post } from '@/app/lib/definition';
 import { QueryResultRow } from '@vercel/postgres';
 import Loading from '../../loading';
-import Title from '@/app/ui/TitleSections';
+import TitleSections from '../../ui/TitleSections';
 
 const PostsList = () => {
 	const [posts, setPosts] = useState<Post[] | QueryResultRow | undefined>([]);
@@ -34,7 +34,7 @@ const PostsList = () => {
 
 	return (
 		<div>
-			<Title text={'Blog'} />
+			<TitleSections text={'Blog'} />
 			<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-4 '>
 				{posts?.map((post: Post) => (
 					<PostCard

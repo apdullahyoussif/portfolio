@@ -3,13 +3,13 @@
 'use client';
 import Image from 'next/image';
 import { projects } from '../lib/AllData';
-import Title from '../ui/TitleSections';
+import TitleSections from '../ui/TitleSections';
 
 export default function Projects() {
 	return (
 		<section className='py-8 bg-gray-100 dark:bg-gray-900'>
 			<div className='container mx-auto text-center'>
-				<Title text={'Projects'} />
+				<TitleSections text={'Projects'} />
 				<p className='text-lg text-gray-700 dark:text-gray-300 mb-12'>
 					Here are some of my most recent projects, built with modern web
 					technologies.

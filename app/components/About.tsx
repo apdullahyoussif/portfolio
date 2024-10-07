@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import Button from '../ui/button';
 import aboutImg from '../assets/webp/about.webp';
-import Title from '../ui/TitleSections';
+import TitleSections from '../ui/TitleSections';
 import ButtonDownload from '../ui/downloadButton';
 export default function About() {
 	const [isVisible, setIsVisible] = useState(false);
@@ -42,7 +42,7 @@ export default function About() {
 				animate={
 					isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }
 				}>
-				<Title text='About Me' />
+				<TitleSections text='About Me' />
 			</motion.div>
 			<div className='container mx-auto flex flex-col md:flex-row items-center justify-between space-y-6 md:space-y-0 md:space-x-12'>
 				<motion.div

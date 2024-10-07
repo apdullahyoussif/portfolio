@@ -1,7 +1,7 @@
 /** @format */
 'use client';
 import { services } from '../lib/AllData';
-import Title from '../ui/TitleSections';
+import TitleSections from '../ui/TitleSections';
 
 export default function Services() {
 	return (
@@ -9,7 +9,7 @@ export default function Services() {
 			id='services'
 			className='py-16 bg-gray-100 dark:bg-gray-900'>
 			<div className='container mx-auto text-center'>
-				<Title text={'Our Services'} />
+				<TitleSections text={'Our Services'} />
 				<p className='text-lg text-gray-700 dark:text-gray-300 mb-12'>
 					We offer a wide range of services, from AI integration to web
 					development and project management.

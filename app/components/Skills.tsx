@@ -3,13 +3,13 @@
 // pages/skills/index.tsx
 'use client';
 import { skills } from '../lib/AllData';
-import Title from '../ui/TitleSections';
+import TitleSections from '../ui/TitleSections';
 
 export default function Skills() {
 	return (
 		<section className='pb-16 bg-gray-100 dark:bg-gray-800'>
 			<div className='container mx-auto text-center'>
-				<Title text='Skills' />
+				<TitleSections text='Skills' />
 				<div
 					
 					className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8'>

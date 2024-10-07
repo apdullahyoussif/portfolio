@@ -1,7 +1,7 @@
 /** @format */
 'use client';
 import { SetStateAction, useState } from 'react';
-import Title from '../ui/TitleSections';
+import TitleSections from '../ui/TitleSections';
 import { certificates } from '../lib/AllData';
 import Image from 'next/image';
 import Modal from '../ui/certificates';
@@ -22,7 +22,7 @@ export default function Certificates() {
 			id='certificates'
 			className='py-16 bg-gray-100 dark:bg-gray-900'>
 			<div className='container mx-auto text-center'>
-				<Title text='Certificates' />
+				<TitleSections text='Certificates' />
 				<div className='grid grid-cols-2 md:grid-cols-5 gap-4'>
 					{certificates.map((cert) => (
 						<div

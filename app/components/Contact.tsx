@@ -1,7 +1,7 @@
 /** @format */
 'use client';
 import { useState } from 'react';
-import Title from '../ui/TitleSections';
+import TitleSections from '../ui/TitleSections';
 
 export default function Contact() {
 	const [formData, setFormData] = useState({
@@ -26,7 +26,7 @@ export default function Contact() {
 			id='contact'
 			className='py-16 bg-gray-100 dark:bg-gray-900'>
 			<div className='container mx-auto text-center'>
-				<Title text={'Contact Me'} />
+				<TitleSections text={'Contact Me'} />
 				<p className='text-lg text-gray-700 dark:text-gray-300 mb-8'>
 					Feel free to reach out to me for any inquiries or collaborations.
 				</p>

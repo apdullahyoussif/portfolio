@@ -1,14 +1,14 @@
 /** @format */
 'use client';
 import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
-import Title from '../ui/TitleSections';
+import TitleSections from '../ui/TitleSections';
 import { testimonials } from '../lib/AllData';
 
 export default function Testimonials() {
 	return (
 		<section className='py-16 bg-gray-100 dark:bg-gray-900'>
 			<div className='container mx-auto text-center'>
-				<Title text='Testimonials' />
+				<TitleSections text='Testimonials' />
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
 					{testimonials.map((testimonial) => (
 						<div
