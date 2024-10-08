@@ -10,11 +10,10 @@ import { useState } from 'react';
 import { useAuth, UserButton } from '@clerk/nextjs';
 import LinksMnue from '../ui/LinksMnue';
 import { motion } from 'framer-motion';
-// import IconsThemes from '../ui/IconsThemes';
 import dynamic from 'next/dynamic';
 
 const IconsThemes = dynamic(() => import('../ui/IconsThemes'), {
-  ssr: false,
+	ssr: false,
 });
 export default function Navbar() {
 	const [open, setOpen] = useState(false);
@@ -38,24 +37,28 @@ export default function Navbar() {
 		<nav className='bg-white shadow-lg dark:bg-gray-800 dark:text-gray-200 relative'>
 			<div className='container mx-auto flex items-center justify-between py-4'>
 				<div className={styles.logoContainer}>
-					<Link aria-label="LOGO Link" 
+					<Link
+						aria-label='LOGO Link'
 						prefetch
 						href='/'
 						className={styles.logoLink}>
-						<p className={styles.logoText}>&lt; Abdullah /&gt;</p>
+						<p className={`${styles.logoText} text-[20px] md:text-3xl`}>
+							&lt; Abdullah /&gt;
+						</p>
 					</Link>
 				</div>
 
 				<div className='flex items-center gap-2 justify-center'>
 					<IconsThemes />
-					<Link aria-label="Blog Link" 
+					<Link
+						aria-label='Blog Link'
 						prefetch
 						href={'/blog'}>
 						<Button title={'My Blog'} />
 					</Link>
 				</div>
 
-				<div className='hidden lg:flex space-x-2'>
+				<div className='hidden md:flex space-x-4'>
 					{Links.map((link) => (
 						<NavbarUI
 							key={link.id}
@@ -69,12 +72,14 @@ export default function Navbar() {
 					<UserButton />
 				) : (
 					<div className='md:flex hidden items-center gap-2'>
-						<Link aria-label="sign-in Link" 
+						<Link
+							aria-label='sign-in Link'
 							prefetch
 							href='/sign-in'>
 							<Button title={'Login'} />
 						</Link>
-						<Link aria-label="sign-up Link" 
+						<Link
+							aria-label='sign-up Link'
 							prefetch
 							href='/sign-up'>
 							<Button title={'Sign up'} />
@@ -82,7 +87,7 @@ export default function Navbar() {
 					</div>
 				)}
 
-				<div className='lg:hidden transition'>
+				<div className='md:hidden transition '>
 					<div
 						onClick={() => setOpen(!open)}
 						className='cursor-pointer'>
@@ -94,7 +99,7 @@ export default function Navbar() {
 					</div>
 
 					<motion.div
-						className={`min-w-[350px] absolute top-[80px] left-1/2 -translate-x-1/2 z-10 p-2 ${
+						className={`min-w-[350px] absolute top-[70px] left-1/2 -translate-x-1/2 z-10 p-2 ${
 							open ? 'block' : 'hidden'
 						}`}
 						initial={false}

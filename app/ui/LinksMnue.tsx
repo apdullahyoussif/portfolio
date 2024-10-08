@@ -14,8 +14,8 @@ const LinksMnue = () => {
 		<div
 		
 		 className='bg-gray-50 dark:bg-gray-700 shadow-2xl rounded-2xl '>
-			<div className='container flex-col px-4 py-4 flex items-center justify-between'>
-				<div className='flex space-x-4'>
+			<div className='container flex-col px-3 py-4 flex items-center justify-between'>
+				<div className='flex space-x-2'>
 					{Links.map((link) => (
 						<NavbarUI
 							key={link.id}
