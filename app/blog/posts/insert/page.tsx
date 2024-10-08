@@ -1,10 +1,11 @@
 /** @format */
-
 'use client';
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { v4 as uuidv4 } from 'uuid';
+import { FaQuestionCircle } from 'react-icons/fa';
+import FormattingContent from '@/app/ui/FormattingContent';
 
 function MyForm() {
 	const router = useRouter();
@@ -16,6 +17,7 @@ function MyForm() {
 		date: new Date().toISOString().slice(0, 10),
 	});
 	const [notification, setNotification] = useState('');
+	const [showInstructions, setShowInstructions] = useState(false);
 
 	const handleChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -72,6 +74,17 @@ function MyForm() {
 					{notification}
 				</div>
 			)}
+			<div className='container relative pt-2'>
+				<button
+					onClick={() => setShowInstructions(!showInstructions)}
+					className='text-blue-500 mb-4 flex items-center space-x-2'>
+					<FaQuestionCircle className='text-2xl' />
+					<span>How to format your post?</span>
+				</button>
+
+				{showInstructions && <FormattingContent />}
+			</div>
+
 			<form
 				onSubmit={handleSubmit}
 				className='flex flex-col gap-4 p-4 max-w-lg mx-auto'>
@@ -144,7 +157,8 @@ function MyForm() {
 					/>
 				</div>
 
-				<button  aria-label=" Create  Button" 
+				<button
+					aria-label='Create Button'
 					type='submit'
 					className='bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600'>
 					Create

@@ -165,7 +165,7 @@ const PostDetails = ({ params }: { params: { id: string } }) => {
 					</div>
 				</div>
 				<div className='border-b-2 border-spacing-0 mb-4'>
-					<h3 className='text-3xl font-bold mb-6 text-center text-sky-700 tracking-wider'>
+					<h3 className='text-3xl font-bold mb-6 text-center bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 text-transparent bg-clip-text tracking-wider'>
 						{post?.title}
 					</h3>
 				</div>
