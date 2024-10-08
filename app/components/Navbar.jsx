@@ -42,7 +42,7 @@ export default function Navbar() {
 						prefetch
 						href='/'
 						className={styles.logoLink}>
-						<p className={`${styles.logoText} text-[20px] md:text-3xl`}>
+						<p className={`${styles.logoText} text-[20px] md:text-[28px]`}>
 							&lt; Abdullah /&gt;
 						</p>
 					</Link>
@@ -58,7 +58,7 @@ export default function Navbar() {
 					</Link>
 				</div>
 
-				<div className='hidden md:flex space-x-4'>
+				<div className='hidden lg:flex '>
 					{Links.map((link) => (
 						<NavbarUI
 							key={link.id}
@@ -87,7 +87,7 @@ export default function Navbar() {
 					</div>
 				)}
 
-				<div className='md:hidden transition '>
+				<div className='lg:hidden transition '>
 					<div
 						onClick={() => setOpen(!open)}
 						className='cursor-pointer'>
@@ -99,7 +99,7 @@ export default function Navbar() {
 					</div>
 
 					<motion.div
-						className={`min-w-[350px] absolute top-[70px] left-1/2 -translate-x-1/2 z-10 p-2 ${
+						className={`min-w-[350px] absolute md:top-[80px] top-[70px] left-1/2 -translate-x-1/2 z-10 p-2 ${
 							open ? 'block' : 'hidden'
 						}`}
 						initial={false}
