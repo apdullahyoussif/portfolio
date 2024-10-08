@@ -1,7 +1,6 @@
 /** @format */
 
 import Head from 'next/head';
-// app/_app.ts
 export default function MyApp({
 	Component,
 	pageProps,
