@@ -5,7 +5,6 @@ import Link from 'next/link';
 
 const page = () => {
 	return (
-		<div className='dark:bg-gradient-light bg-gradient-dark '>
 			<div className='container px-4 py-8 '>
 				<Link
 					aria-label='Create Link'
@@ -18,7 +17,6 @@ const page = () => {
 
 				<PostsList />
 			</div>
-		</div>
 	);
 };
 
