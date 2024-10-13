@@ -27,7 +27,7 @@ import image6 from '../assets/webp/intero_web_internet.webp';
 import image7 from '../assets/webp/nextjs.webp';
 import image8 from '../assets/webp/JSlinckedin.webp';
 
-import imageChat from '../assets/webp/CHATGPT.webp';
+import imageChat from '../assets/webp/projectEditor.png';
 import imageBank from '../assets/webp/Bank.webp';
 import imageEcommerce from '../assets/webp/Ecommerc.webp';
 
@@ -200,15 +200,13 @@ export const projects = [
 		id: 2,
 		title: 'AI Chatbot',
 		description:
-			'A chatbot powered by OpenAI GPT-4, integrated in a web application. Built with Next.js and PostgreSQL.',
+			'A Editor Web App built with Javascript, HTML, CSS',
 		image: imageChat,
 		technologies: [
-			'OpenAI API',
-			'Next.js',
-			'postgerSQL',
-			'Tailwind CSS',
-			'SQL',
+			'HTML',
+			'CSS',
+			'Javascript',
 		],
-		path: 'https://open-ai-nine-kohl.vercel.app/',
+		path: 'https://apdullahyoussif.github.io/Edtitor-Project/',
 	},
 ];
