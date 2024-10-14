@@ -5,7 +5,12 @@ import TitleSections from '../ui/TitleSections';
 import { certificates } from '../lib/AllData';
 import Image from 'next/image';
 import Modal from '../ui/certificates';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'certificates - Abdullah Youssef',
+  description: 'Exploring certificates of Abdullah Youssef, a passionate web developer.',
+};
 export default function Certificates() {
 	const [selectedCert, setSelectedCert] = useState(null);
 

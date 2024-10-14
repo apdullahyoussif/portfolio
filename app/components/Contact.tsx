@@ -2,7 +2,12 @@
 'use client';
 import { useState } from 'react';
 import TitleSections from '../ui/TitleSections';
-
+import { Metadata } from 'next';
+export const metadata: Metadata = {
+	title: 'Contact - Abdullah Youssef',
+	description: 'Get in touch with Abdullah Youssef for any inquiries.',
+  };
+  
 export default function Contact() {
 	const [formData, setFormData] = useState({
 		name: '',

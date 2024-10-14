@@ -61,6 +61,8 @@ const nextConfig = {
 	},
 
 	swcMinify: true,
+	siteUrl: 'https://abdullah-youssef.com',
+	generateRobotsTxt: true,
 };
 
 export default nextConfig;

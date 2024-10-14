@@ -4,7 +4,13 @@
 import Image from 'next/image';
 import { projects } from '../lib/AllData';
 import TitleSections from '../ui/TitleSections';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+	title: 'Frontend Projects - Abdullah Youssef',
+	description: 'Explore the front-end development projects by Abdullah Youssef using React, Next.js, and more.',
+  };
+  
 export default function Projects() {
 	return (
 		<section className='py-8 bg-gray-100 dark:bg-gray-900'>

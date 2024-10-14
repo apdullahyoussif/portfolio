@@ -7,6 +7,28 @@ import Button from '../ui/button';
 import aboutImg from '../assets/webp/about.webp';
 import TitleSections from '../ui/TitleSections';
 import ButtonDownload from '../ui/downloadButton';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'About - Abdullah Youssef',
+	description: 'Learn more about Abdullah Youssef, a passionate web developer.',
+	openGraph: {
+	  title: 'About - Abdullah Youssef',
+	  description: 'Learn more about Abdullah Youssef, a passionate web developer.',
+	  url: 'https://abdullah-youssef.com/about',
+	  siteName: 'Abdullah Youssef Portfolio',
+	  images: [
+		{
+		  url: 'https://abdullah-youssef.com/assets/webp/about.webp',
+		  width: 1200,
+		  height: 630,
+		  alt: 'Abdullah Youssef Avatar',
+		},
+	  ],
+	  type: 'website',
+	},
+  };
+  
 export default function About() {
 	const [isVisible, setIsVisible] = useState(false);
 	const sectionRef = useRef(null);
